@@ -38,13 +38,14 @@ Hello! my name *{}*. I'm a modular group management bot with a few fun extras!
  - /settings:
    - in PM: will send you your settings for all supported modules.
    - in a group: will redirect you to pm, with all that chat's settings.  
+
 All commands can either be used with / or !
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 It took lots of work for [my creator](t.me/THEALIFHAKER1) to get me to where I am now, and every donation helps \
 motivate him to make me even better. \
-(He's just a poor student, so every little helps!
+(He's just a poor student, so every little helps!)
 There are one ways of paying him; [PayPal](paypal.me/AEALIFDANIEL2003)."""
 
 IMPORTED = {}
