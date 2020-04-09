@@ -1,7 +1,7 @@
 
 {
-  "name": "Marie-2.0 English",
-  "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
+  "name": "AE BOT",
+  "description": "Telegram group manager!",
   "keywords": [
     "telegram",
     "best",
@@ -9,7 +9,7 @@
     "manager",
     "3"
   ],
-  "repository": "hhttps://github.com/TGExplore/Marie-2.0-English",
+  "repository": "https://github.com/THEALIFHAKER1/AE_BOT",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable env variables",
@@ -17,22 +17,22 @@
     },
     "TOKEN": {
       "description": "Your bot token, as a string.",
-      "value": ""
+      "value": "1109143479:AAEtxxcbZyErb5QHS5ryEyLzb3k6_a_5rR8"
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "683538773"
+      "value": "844892244"
     },
     "OWNER_USERNAME": {
       "description": "Your username",
-      "value": "ViruZs"
+      "value": "ᵀᴴᴱA⃟LIFHAKER1"
     },
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
       "value": "ANYTHING"
     },
     "URL": {
-      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+      "description": "The Heroku App URL similar to https://ae1-bot.herokuapp.com/",
       "value": ""
     },
     "MESSAGE_DUMP": {
@@ -41,19 +41,19 @@
     },
     "SUDO_USERS": {
       "description": "A space separated list of user_ids which should be considered sudo users",
-      "value": "254318997 683538773 570400686 466337795"
+      "value": "844892244"
     },
     "SUPPORT_USERS": {
       "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
-      "value": "254318997 683538773 570400686 466337795"
+      "value": "844892244"
     },
     "WHITELIST_USERS": {
       "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
-      "value": "254318997 683538773 570400686 466337795"
+      "value": "844892244"
     },
     "DONATION_LINK": {
       "description": "Optional: link where you would like to receive donations.",
-      "value": "https://www.paypal.me/Your_id_here"
+      "value": "https://www.paypal.me/AEALIFDANIEL2003"
     },
     "PORT": {
       "description": "Port to use for your webhooks",
