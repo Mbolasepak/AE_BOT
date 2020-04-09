@@ -19,9 +19,12 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 Hey there! My name is {} - I'm here to help you manage your groups!
-Click Help button to find out more about how to use me to my full potential.
+Click /help  to find out more about how to use me to my full potential.
+
+im a group manager bot maintained by  [this person](tg://user?id={}).
 
 **#AE1**
+[Source Code](https://github.com/THEALIFHAKER1/AE_BOT)
 """
 
 HELP_STRINGS = """
