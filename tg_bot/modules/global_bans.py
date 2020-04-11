@@ -40,6 +40,7 @@ UNGBAN_ERRORS = {
     "Not in the chat",
     "Channel_private",
     "Chat_admin_required",
+    "Peer_id_invalid",
 }
 
 
@@ -91,20 +92,14 @@ def gban(bot: Bot, update: Update, args: List[str]):
 
         return
 
-    message.reply_text("⚡️ *Snaps the Banhammer* ⚡️")
+    message.reply_text("*Blows dust off of banhammer* 😉")
 
     banner = update.effective_user  # type: Optional[User]
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
-                 "<b>Global Ban</b>" \
-                 "\n#GBAN" \
-                 "\n<b>Status:</b> <code>Enforcing</code>" \
-                 "\n<b>Sudo Admin:</b> {}" \
-                 "\n<b>User:</b> {}" \
-                 "\n<b>ID:</b> <code>{}</code>" \
-                 "\n<b>Reason:</b> {}".format(mention_html(banner.id, banner.first_name),
-                                              mention_html(user_chat.id, user_chat.first_name), 
-                                                           user_chat.id, reason or "No reason given"), 
-                html=True)
+                 "{} is gbanning user {} "
+                 "because:\n{}".format(mention_html(banner.id, banner.first_name),
+                                       mention_html(user_chat.id, user_chat.first_name), reason or "No reason given"),
+                 html=True)
 
     sql.gban_user(user_id, user_chat.username or user_chat.first_name, reason)
 
@@ -129,9 +124,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
         except TelegramError:
             pass
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, 
-                  "{} has been successfully gbanned!".format(mention_html(user_chat.id, user_chat.first_name)),
-                html=True)
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gban complete!")
     message.reply_text("Person has been gbanned.")
 
 
@@ -155,17 +148,11 @@ def ungban(bot: Bot, update: Update, args: List[str]):
 
     banner = update.effective_user  # type: Optional[User]
 
-    message.reply_text("I pardon {}, globally with a second chance.".format(user_chat.first_name))
+    message.reply_text("I'll give {} a second chance, globally.".format(user_chat.first_name))
 
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
-                 "<b>Regression of Global Ban</b>" \
-                 "\n#UNGBAN" \
-                 "\n<b>Status:</b> <code>Ceased</code>" \
-                 "\n<b>Sudo Admin:</b> {}" \
-                 "\n<b>User:</b> {}" \
-                 "\n<b>ID:</b> <code>{}</code>".format(mention_html(banner.id, banner.first_name),
-                                                       mention_html(user_chat.id, user_chat.first_name), 
-                                                                    user_chat.id),
+                 "{} has ungbanned user {}".format(mention_html(banner.id, banner.first_name),
+                                                   mention_html(user_chat.id, user_chat.first_name)),
                  html=True)
 
     chats = get_all_chats()
@@ -193,12 +180,9 @@ def ungban(bot: Bot, update: Update, args: List[str]):
 
     sql.ungban_user(user_id)
 
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, 
-                  "{} has been pardoned from gban!".format(mention_html(user_chat.id, 
-                                                                         user_chat.first_name)),
-                  html=True)
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gban complete!")
 
-    message.reply_text("This person has been un-gbanned and pardon is granted!")
+    message.reply_text("Person has been un-gbanned.")
 
 
 @run_async
