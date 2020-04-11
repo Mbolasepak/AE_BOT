@@ -187,7 +187,7 @@ def list_notes(bot: Bot, update: Update):
             msg = ""
         msg += note_name
 
-    if msg == "*Notes in chat:*\n":
+    if msg == "*Notes in chat *{}*:*\n":
         update.effective_message.reply_text("No notes in this chat!")
 
     elif len(msg) != 0:
