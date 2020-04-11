@@ -24,7 +24,7 @@ Click /help to find out more about how to use me to my full potential.
 im a group manager bot maintained by  [this person](t.me/THEALIFHAKER1).
 
 **#AE1**
-[[Source Code](https://github.com/THEALIFHAKER1/AE_BOT)]
+[ [Source Code](https://github.com/THEALIFHAKER1/AE_BOT) ]
 """
 
 HELP_STRINGS = """
@@ -138,7 +138,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("I ALIVE")
+        update.effective_message.reply_text("1 2 3 hah? i alive")
 
 
 # for test purposes
